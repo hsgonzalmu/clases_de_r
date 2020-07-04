@@ -9,4 +9,7 @@
 
 # Llamar liberias ---------------------------------------------------------
 # Para ejecutar una linea de codigo, ctrl+enter
-library(tidyverse)
+library(tidyverse) # Es para manipulacion de datos
+library(lubridate) # Manipular fechas
+library(readxl) # Leer excel
+library(writexl) # Escribir un excel
