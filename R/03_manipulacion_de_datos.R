@@ -133,6 +133,32 @@ salarios %>%
   filter(salario == max(salario))
 
 
+# Visualizar por año el comportamiento de los salarios 
+# Para visualizar ocuparemos la libería ggplot
+
+salarios %>% 
+  group_by(anio) %>% # Agrupar
+  summarise(salario = sum(salario)/1e6) %>% 
+  ggplot(aes(anio, salario)) + 
+  geom_line()
+
+library(scales)
+
+salarios %>% 
+  group_by(anio, id_liga) %>% # Agrupar
+  summarise(salario = sum(salario)/1e6) %>%
+  ungroup() %>% 
+  ggplot(aes(anio, salario)) + 
+  geom_line() +
+  facet_wrap(. ~ id_liga, scale = "free") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
+
+
+
+
+
+
 
 
 
