@@ -51,7 +51,7 @@ salarios_2 %>% glimpse()
 #'
 #' #### 2. Guarde el resultado en excel 
 #'
-writexl::write_xlsx(salarios_2, "tareas/salarios_2.xlsx") 
+# writexl::write_xlsx(salarios_2, "tareas/salarios_2.xlsx") 
 #'
 #' #### 3. Resumir total salario en millones de pesos entre los año 1985 y 1995
 #' 
